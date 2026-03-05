@@ -20,7 +20,7 @@ app.get('/', async (req, res) => {
   try {
     const result = await client.query('SELECT NOW()');
     res.json({
-      message: 'DevOps Stack funcionando 🔥',
+      message: 'DevOps Stack funcionando ',
       time: result.rows[0].now
     });
   } catch (err) {
