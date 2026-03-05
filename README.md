@@ -1,8 +1,10 @@
-DevOps Docker Stack with Node.js, PostgreSQL and Nginx
+**DevOps Docker Stack with Node.js, PostgreSQL and Nginx**
+
 Multi-container backend architecture built using Docker Compose.
 This project demonstrates service orchestration, reverse proxy configuration, persistent database storage and health monitoring in a production-like environment.
 
-Project Overview
+**Project Overview**
+
 This repository contains a backend stack composed of:
 Node.js API built with Express
 PostgreSQL database with persistent storage
@@ -13,17 +15,20 @@ SQL initialization script
 Environment-based configuration
 The goal of this project is to demonstrate DevOps fundamentals applied to containerized backend systems.
 
-Architecture
+**Architecture**
+
 Client
 Nginx Reverse Proxy
 Node.js API
 PostgreSQL Database
 
-Nginx routes external traffic to the API.
+**Nginx routes external traffic to the API.**
+
 The API connects to PostgreSQL through an internal Docker network.
 Docker Compose manages networking, dependencies and service lifecycle.
 
-Technology Stack
+**Technology Stack**
+
 Docker
 Docker Compose
 Node.js
@@ -35,7 +40,8 @@ Environment variables configuration
 Health checks
 Persistent Docker volumes
 
-Features
+**Features**
+
 Multi-container architecture
 Reverse proxy configuration
 Service dependency management
@@ -46,7 +52,8 @@ Environment variable configuration
 Simple persistent hit counter endpoint
 Infrastructure defined as code using Docker Compose
 
-Project Structure
+**Project Structure**
+
 api/
 Node.js API source code
 db/init.sql
@@ -60,7 +67,8 @@ Environment variables template
 docs/evidencias/
 Execution screenshots
 
-How to Run
+**How to Run**
+
 Clone the repository
 git clone git@github.com
 :ulicesctech/devops-docker-node-postgres-nginx.git
@@ -76,25 +84,34 @@ docker compose up -d --build
 Verify running services
 docker compose ps
 
-Available Endpoints
+**Available Endpoints**
+
 GET /
 Root endpoint
+
 GET /health
 Health check endpoint
+
 GET /hit
 Persistent hit counter
-Example:
+
+**Example:**
+
 curl http://localhost:8081/
+
 curl http://localhost:8081/health
+
 curl http://localhost:8081/hit
 
-Health Checks
+**Health Checks**
+
 PostgreSQL readiness validation using pg_isready
 API HTTP health endpoint validation
 Nginx reverse proxy health verification
 Each service must report healthy status before dependent services start.
 
-DevOps Concepts Demonstrated
+**DevOps Concepts Demonstrated**
+
 Container orchestration
 Reverse proxy architecture
 Persistent storage in Docker
@@ -104,6 +121,8 @@ Health monitoring
 Infrastructure as Code
 Network isolation between services
 
-Author
-Ulicestech
-Backend and DevOps Portfolio Project
+**Author**
+
+**Joshua Ulices Santos Castillo**
+
+**Backend and DevOps Portfolio Project**
