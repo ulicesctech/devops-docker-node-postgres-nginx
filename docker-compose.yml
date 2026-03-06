@@ -1,15 +1,4 @@
 services:
-  adminer:
-    image: adminer:latest
-    container_name: adminer-ui
-    ports:
-      - "8082:8080"
-    depends_on:
-      db:
-        condition: service_healthy
-    networks:
-      - devops-net
-
   db:
     image: postgres:15
     container_name: postgres-db
@@ -59,7 +48,7 @@ services:
     networks:
       - devops-net
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost/health >/dev/null 2>&1 || exit 1"]
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1/health >/dev/null 2>&1 || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 5
