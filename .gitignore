@@ -1,4 +1,4 @@
-# Environment variables (NO subir credenciales)
+# Environment variables
 .env
 
 # Node dependencies
